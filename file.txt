@@ -1,2 +1,7 @@
 This is file.txt
+<<<<<<< HEAD
 change from MASTER branch
+=======
+Change from DEV branch
+Another Dev change
+>>>>>>> dev
