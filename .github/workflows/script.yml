@@ -1,20 +1,22 @@
-name: Run Script
+name: CI Docker Pipeline
 
 on:
   push:
     branches:
       - main
-      - feature/*
 
 jobs:
-  run-script:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run script
+      - name: Build Docker Image
         run: |
-          echo "Running script..."
-          cat file.txt
+          docker build -t my-image .
+
+      - name: Run Container
+        run: |
+          docker run my-image
