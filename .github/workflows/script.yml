@@ -18,9 +18,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-first-devops-image:latest .
+          docker build -t okhaidon0147/my-first-devops-image:latest .
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-first-devops-image:latesto
-
+          docker push okhaidon0147/my-first-devops-image:latest
